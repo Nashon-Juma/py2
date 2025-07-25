@@ -212,3 +212,30 @@ with open("people.csv", "r") as file:
     reader = csv.reader(file)
     for row in reader:
         print(", ".join(row))
+        
+# Basic class demonstration
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited ${amount}. New balance: ${self.balance}")
+    
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient funds!")
+        else:
+            self.balance -= amount
+            print(f"Withdrew ${amount}. New balance: ${self.balance}")
+    
+    def __str__(self):
+        return f"BankAccount(owner='{self.owner}', balance={self.balance})"
+
+# Using the class
+account = BankAccount("Alice", 100)
+print(account)
+account.deposit(50)
+account.withdraw(30)
+account.withdraw(200)  # Should show insufficient funds
