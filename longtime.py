@@ -239,3 +239,25 @@ print(account)
 account.deposit(50)
 account.withdraw(30)
 account.withdraw(200)  # Should show insufficient funds
+
+# Install these first: pip install requests beautifulsoup4
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://example.com"
+
+try:
+    response = requests.get(url)
+    response.raise_for_status()  # Check for HTTP errors
+    
+    soup = BeautifulSoup(response.text, 'html.parser')
+    print(f"Page title: {soup.title.string}")
+    
+    print("\nAll paragraph texts:")
+    for paragraph in soup.find_all('p'):
+        print(paragraph.get_text())
+        
+except requests.exceptions.RequestException as e:
+    print(f"Error fetching the page: {e}")
+
+
