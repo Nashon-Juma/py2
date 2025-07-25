@@ -41,3 +41,24 @@ print("\nCounting up to 5 with while loop:")
 while count < 5:
     count += 1
     print(count)
+    
+    
+# Working with lists
+fruits = ["apple", "banana", "cherry", "date"]
+
+print("Original list:", fruits)
+print("First fruit:", fruits[0])
+print("Last fruit:", fruits[-1])
+
+# Adding items
+fruits.append("elderberry")
+print("After append:", fruits)
+
+# Removing items
+fruits.remove("banana")
+print("After remove:", fruits)
+
+# Looping through list
+print("\nAll fruits:")
+for fruit in fruits:
+    print(fruit.title())
