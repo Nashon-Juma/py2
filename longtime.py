@@ -75,3 +75,23 @@ def add_numbers(a, b):
 print(greet("Bob"))
 result = add_numbers(5, 7)
 print(f"5 + 7 = {result}")
+
+
+
+# Working with dictionaries
+person = {
+    "name": "Alice",
+    "age": 25,
+    "occupation": "Developer",
+    "hobbies": ["reading", "hiking", "coding"]
+}
+
+# Accessing values
+print(f"{person['name']} is a {person['occupation']}")
+print("Hobbies:")
+for hobby in person["hobbies"]:
+    print(f"- {hobby}")
+
+# Adding new key-value pair
+person["email"] = "alice@example.com"
+print("\nUpdated dictionary:", person)
