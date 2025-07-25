@@ -95,3 +95,16 @@ for hobby in person["hobbies"]:
 # Adding new key-value pair
 person["email"] = "alice@example.com"
 print("\nUpdated dictionary:", person)
+
+
+
+# Writing to a file
+with open("example.txt", "w") as file:
+    file.write("Hello, Python!\n")
+    file.write("This is a sample file.\n")
+
+# Reading from a file
+print("File contents:")
+with open("example.txt", "r") as file:
+    for line in file:
+        print(line.strip())
