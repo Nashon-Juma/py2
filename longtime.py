@@ -150,3 +150,18 @@ while True:
         print(f"Congratulations! You guessed it in {attempts} attempts.")
         break
     
+from datetime import datetime, timedelta
+
+# Current date and time
+now = datetime.now()
+print(f"Current datetime: {now}")
+print(f"Formatted date: {now.strftime('%Y-%m-%d %H:%M:%S')}")
+
+# Date arithmetic
+one_week_later = now + timedelta(weeks=1)
+print(f"One week later: {one_week_later.date()}")
+
+# Parsing dates
+date_string = "2023-12-25"
+christmas = datetime.strptime(date_string, "%Y-%m-%d")
+print(f"Christmas day: {christmas.strftime('%B %d, %Y')}")
