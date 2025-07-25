@@ -108,3 +108,23 @@ print("File contents:")
 with open("example.txt", "r") as file:
     for line in file:
         print(line.strip())
+        
+# String methods and formatting
+text = "  learn Python programming  "
+
+# String methods
+print(f"Original: '{text}'")
+print(f"Strip whitespace: '{text.strip()}'")
+print(f"Title case: '{text.strip().title()}'")
+print(f"Replace 'Python' with 'JavaScript': '{text.replace('Python', 'JavaScript')}'")
+print(f"Find 'pro' in string: position {text.find('pro')}")
+
+# Splitting and joining
+words = text.strip().split()
+print("\nSplit into words:", words)
+print("Joined with commas:", ", ".join(words))
+
+# String formatting
+price = 19.99
+quantity = 3
+print(f"\nTotal: ${price * quantity:.2f}")  # Format to 2 decimal places
