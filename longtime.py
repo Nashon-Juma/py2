@@ -28,3 +28,16 @@ elif 20 <= temperature <= 30:
     print("The weather is pleasant.")
 else:
     print("It's cold outside!")
+    
+    
+# For loop example
+print("Counting from 1 to 5:")
+for i in range(1, 6):
+    print(i)
+
+# While loop example
+count = 0
+print("\nCounting up to 5 with while loop:")
+while count < 5:
+    count += 1
+    print(count)
