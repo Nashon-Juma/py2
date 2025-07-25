@@ -62,3 +62,16 @@ print("After remove:", fruits)
 print("\nAll fruits:")
 for fruit in fruits:
     print(fruit.title())
+    
+    
+# Defining and calling functions
+def greet(name):
+    return f"Hello, {name}! Welcome to Python."
+
+def add_numbers(a, b):
+    return a + b
+
+# Using the functions
+print(greet("Bob"))
+result = add_numbers(5, 7)
+print(f"5 + 7 = {result}")
