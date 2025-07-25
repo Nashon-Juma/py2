@@ -191,3 +191,24 @@ while True:
         print("That's not an integer! Try again.")
     except ZeroDivisionError:
         print("You can't divide by zero! Try again.")
+        
+import csv
+
+# Writing to a CSV file
+data = [
+    ["Name", "Age", "Occupation"],
+    ["Alice", 28, "Engineer"],
+    ["Bob", 32, "Teacher"],
+    ["Charlie", 45, "Doctor"]
+]
+
+with open("people.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+
+# Reading from a CSV file
+print("\nReading from CSV file:")
+with open("people.csv", "r") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(", ".join(row))
