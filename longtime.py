@@ -179,3 +179,15 @@ fahrenheit = [(9/5)*temp + 32 for temp in celsius]
 print("\nCelsius to Fahrenheit:")
 for c, f in zip(celsius, fahrenheit):
     print(f"{c}°C = {f:.1f}°F")
+    
+# Try-except blocks for error handling
+while True:
+    try:
+        num = int(input("Enter an integer: "))
+        reciprocal = 1 / num
+        print(f"The reciprocal of {num} is {reciprocal}")
+        break
+    except ValueError:
+        print("That's not an integer! Try again.")
+    except ZeroDivisionError:
+        print("You can't divide by zero! Try again.")
