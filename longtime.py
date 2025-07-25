@@ -261,3 +261,30 @@ except requests.exceptions.RequestException as e:
     print(f"Error fetching the page: {e}")
 
 
+import json
+
+# Python dictionary
+person = {
+    "name": "Alice",
+    "age": 30,
+    "hobbies": ["reading", "hiking"],
+    "address": {
+        "street": "123 Main St",
+        "city": "Boston"
+    }
+}
+
+# Convert to JSON string
+json_string = json.dumps(person, indent=2)
+print("JSON string:")
+print(json_string)
+
+# Write to file
+with open("person.json", "w") as file:
+    json.dump(person, file, indent=2)
+
+# Read from file
+print("\nReading from JSON file:")
+with open("person.json", "r") as file:
+    loaded_person = json.load(file)
+    print(f"{loaded_person['name']} lives in {loaded_person['address']['city']}")
