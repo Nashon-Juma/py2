@@ -288,3 +288,18 @@ print("\nReading from JSON file:")
 with open("person.json", "r") as file:
     loaded_person = json.load(file)
     print(f"{loaded_person['name']} lives in {loaded_person['address']['city']}")
+    
+    
+import random
+import string
+
+def generate_password(length=12):
+    """Generate a random password with letters, digits, and punctuation"""
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
+
+# Generate and print 5 passwords
+print("Generated passwords:")
+for _ in range(5):
+    print(generate_password())
