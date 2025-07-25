@@ -165,3 +165,17 @@ print(f"One week later: {one_week_later.date()}")
 date_string = "2023-12-25"
 christmas = datetime.strptime(date_string, "%Y-%m-%d")
 print(f"Christmas day: {christmas.strftime('%B %d, %Y')}")
+
+# Creating lists with comprehensions
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Squares of even numbers
+even_squares = [x**2 for x in numbers if x % 2 == 0]
+print("Squares of even numbers:", even_squares)
+
+# Convert temperatures from Celsius to Fahrenheit
+celsius = [0, 10, 20, 30, 40]
+fahrenheit = [(9/5)*temp + 32 for temp in celsius]
+print("\nCelsius to Fahrenheit:")
+for c, f in zip(celsius, fahrenheit):
+    print(f"{c}°C = {f:.1f}°F")
